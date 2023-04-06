@@ -31,7 +31,7 @@ app.post('/message', (req, res) => {
 
     response.then((data) => {
         const message = {message: data.data.choices[0].text};
-        res.send(message);
+        res.json({message});
     }).catch((err) => {
         res.send(err);
     });
